@@ -45,6 +45,8 @@ p {
 
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
@@ -56,6 +58,11 @@ nav {
     justify-content: space-between;
     padding: 0 2.4rem;
     border-bottom: 1px solid var(--very-light-pink);
+}
+
+/* UTILITY*/
+.inactive {
+    display: none;
 }
 
 /* NAVBAR */
@@ -93,8 +100,7 @@ nav {
     transition: border .2s ease;
 }
 
-.navbar__left ul li a:hover,
-.navbar__right ul li a:hover {
+.navbar__left ul li a:hover {
     color: var(--hospital-green);
     border: 1px solid var(--hospital-green);
 }
@@ -103,6 +109,7 @@ nav {
     color: var(--very-light-pink);
     font-size: var(--small);
     margin-right: 1.6rem;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -121,6 +128,7 @@ nav {
 
 .navbar__cart {
     position: relative;
+    cursor: pointer;
 }
 
 .navbar__cart div {
@@ -136,4 +144,39 @@ nav {
     position: absolute;
     top: -.6rem;
     right: -.3rem;
+}
+
+.menu-desktop {
+    width: 140px;
+    height: auto;
+    background-color: var(--white);
+    padding: 2rem;
+    position: absolute;
+    top: 81px;
+    right: 65px;
+    border: 1px solid var(--very-light-pink);
+    border-radius: .4rem;
+}
+
+.menu-desktop ul li {
+    text-align: end;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.menu-desktop ul li a {
+    display: inline-block;
+    color: var(--black);
+    font-size: var(--small);
+}
+
+.menu-desktop ul li:last-child {
+    padding-top: 2rem;
+    margin-bottom: 0;
+    font-weight: normal;
+    border-top: 1px solid var(--very-light-pink);
+}
+
+.menu-desktop ul li:last-child a {
+    color: var(--hospital-green);
 }
