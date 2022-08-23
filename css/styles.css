@@ -1,0 +1,139 @@
+/* VARIABLES */
+:root {
+    /* color */
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* tipografía */
+    --quicksand: 'Quicksand', sans-serif;
+
+    /* tamaño */
+    --small: 1.4rem;
+    --medium: 1.6rem;
+    --large: 1.8rem;
+}
+
+/* AJUSTES */
+html {
+    /** 1 rem = 10px **/
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* GLOBALES */
+body {
+    font-size: var(--medium);
+    font-family: var(--quicksand);
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+/* NAVBAR */
+.navbar__icon-menu {
+    display: none;
+}
+
+.navbar__logo {
+    width: 100px;
+}
+
+.navbar__left {
+    display: flex;
+}
+
+.navbar__left ul,
+.navbar__right ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+}
+
+.navbar__left ul {
+    margin-left: 1.6rem;
+}
+
+.navbar__left ul li a,
+.navbar__right ul li a {
+    color: var(--very-light-pink);
+    padding: .8rem;
+    border: 1px solid var(--white);
+    border-radius: .8rem;
+    transition: border .2s ease;
+}
+
+.navbar__left ul li a:hover,
+.navbar__right ul li a:hover {
+    color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+}
+
+.navbar__email {
+    color: var(--very-light-pink);
+    font-size: var(--small);
+    margin-right: 1.6rem;
+}
+
+@media (max-width: 768px) {
+    .navbar__icon-menu {
+        display: block;
+    }
+
+    .navbar_left ul {
+        display: none;
+    }
+
+    .navbar__email {
+        display: none;
+    }
+}
+
+.navbar__cart {
+    position: relative;
+}
+
+.navbar-cart div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--small);
+    font-weight: bold;
+    background-color: var(--hospital-green);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -.6rem;
+    right: -.3rem;
+}
