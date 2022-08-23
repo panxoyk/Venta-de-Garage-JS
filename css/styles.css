@@ -110,7 +110,7 @@ nav {
         display: block;
     }
 
-    .navbar_left ul {
+    .navbar__left ul {
         display: none;
     }
 
@@ -123,7 +123,7 @@ nav {
     position: relative;
 }
 
-.navbar-cart div {
+.navbar__cart div {
     display: flex;
     justify-content: center;
     align-items: center;
