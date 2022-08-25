@@ -47,14 +47,14 @@ function toggleShoppingCart() {
 function renderProducts (array) {
     for (const product of array) {
         const productHTML = document.createElement('DIV');
-        productHTML.classList.add('product');
+        productHTML.classList.add('products');
 
         const productImage = document.createElement('IMG');
         productImage.setAttribute('src',product.image);
         productImage.setAttribute('alt',`image ${product.name}`);
 
         const productCard = document.createElement('DIV');
-        productCard.classList.add('product__card');
+        productCard.classList.add('products__info');
 
         const productDiv = document.createElement('DIV');
 
